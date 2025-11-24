@@ -1,0 +1,61 @@
+.anton-regular {
+  font-family: "Anton", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+.open-sans-body-text {
+  font-family: "Open Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: <100>;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
+}
+
+/* NavBar
+   Author: Thales
+*/
+
+.links-nav {
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  justify-content: center;
+}
+.links-nav a, .links-nav ul a{
+	font-size: 20px;
+}
+.links-nav li {
+	padding: 13px;
+}
+.spacer-top-body{
+	margin-top: 4rem;
+}
+
+
+/*	scroll efect navbar 
+	source: https://youtu.be/z70GTU3p72I?si=Q4X64UlpOIM_mN2L*/
+	
+.navbar-scrolled{
+	background-color: rgba(212, 212, 212, 0.97); 
+	box-shadow: 0 3px 10px rgba(0,0,0,0.15);
+}
+.navbar{
+	transition: all 0.5s; /*add a transiton of 0.5s for the effect in the navbar*/
+}
+
+/*Resposiveness @media navbar */
+@media(max-width:750px){
+	/*Hide the links in the navbar*/
+	.links-nav{
+		display: none;
+	}
+	/*Reduce the width for the mobile version*/
+	#offcanvasNavbar{
+		--bs-offcanvas-width: 260px; 
+	}
+}
