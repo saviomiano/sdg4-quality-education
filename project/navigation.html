@@ -1,0 +1,81 @@
+<!-- Author: Thales Ferrari 
+ 	I implemented the navigation bar using jQuery with an AJAX request that loads the navbar.html file into each page. 
+	Browsers block AJAX requests when a file is opened directly through the filesystem (file://) for security reasons, so the component only works when served through a local server.
+	To preview it correctly during development, I used a live server tool such as VS Code Live Server, which simulates a real web server environment.-->
+ 
+<nav class="navbar navbar-light fixed-top anton-regular"> <!--background transparent by default, as soon as the user starts scrolling color changes-->
+
+	<div class="container-fluid">
+		<!-- Logo -->
+		<a class="navbar-logo text-decoration-none" href="index.html">
+			<img src="/img/logo/logoNavbar.png" alt="SDG 4 Quality Education Logo" class="d-inline-block align-text-top">
+			<!-- source: AI generated image, application used: chatgpt.com  -->
+			<span class="anton-regular logo-title">Quality Education</span>
+		</a>
+		
+		<!-- Links centered in the navbar -->
+		<ul class="links-nav">
+			<li class="nav-item"><a class="nav-link active" aria-current="page" href="index.html">Home</a></li>
+			<li class="nav-item"><a class="nav-link" href="aboutsdg4.html">About SDG 4</a></li>
+			<li class="nav-item dropdown"><a class="text-decoration-none text-dark dropdown-toggle" href="campaigns.html" role="button" aria-expanded="false">campaigns</a>
+				<ul class="dropdown-menu campaigns-dropdown">
+					<li>
+						<div class="container-fluid py-3">
+							<div class="row g-3">
+								<!-- Card 1   -->
+								<div class="col-6 pe-3">
+									<a href="https://www.nala.ie" class="d-block text-decoration-none text-white">
+										<img src="img/thales/campaigns/takeTheFirstStep.png" class="img-fluid mb-2" alt="Adults engaged in a collaborative learning environment, actively studying together in a classroom filled with educational materials and resources, conveying a sense of teamwork and determination.">
+										<p class="mb-0">Take the First Step</p>
+									</a>
+								</div>
+								
+								<!--  Card 2  -->
+								<div class="col-6 pe-3">
+									<a href="https://malala.org" class="d-block text-decoration-none text-white">
+										<img src="img/thales/campaigns/malalaFound.jpg" class="img-fluid mb-2" alt="Six teenage girls in school uniforms in a classroom, smiling at the camera while holding green folders with documents. They stand in front of a whiteboard with an orange frame, appearing confident and proud of their education.">
+										<p class="mb-0">Malala Fund</p>
+									</a>
+								</div>
+							</div>	
+							<!--  View All  -->
+							<div class="mt-3">
+								<a href="campaigns.html" class="text-decoration-none text-white">
+									View All >
+								</a>
+							</div>
+						</div>
+					</li>
+				</ul>
+			</li>
+			<li class="nav-item"><a class="nav-link" href="get_involved.html">Get Involved</a></li>
+			
+		</ul>
+		
+		<!-- Toggle Button -->
+		<button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		
+		<div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+			<!-- Header and logo toggle button -->
+			<div class="offcanvas-header">
+				<h5 class="offcanvas-title" id="offcanvasNavbarLabel">Quality Education</h5>
+				<button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+			</div>
+			<!-- Content in the toggle button -->
+			<div class="offcanvas-body">
+				<ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+					<li class="nav-item"><a class="nav-link"  href="index.html">Home</a></li>
+					<li class="nav-item"><a class="nav-link" href="aboutsdg4.html">About SDG 4</a></li>
+					<li class="nav-item"><a class="nav-link"  href="target.html">Targets</a></li>
+					<li class="nav-item"><a class="nav-link" href="educationChallenges.html">Education challenge</a></li>
+					<li class="nav-item"><a class="nav-link"  href="campaigns.html">campaigns</a></li>
+					<li class="nav-item"><a class="nav-link" href="stories.html">Stories</a></li>
+					<li class="nav-item"><a class="nav-link" href="resources.html">Resources</a></li>
+					<li class="nav-item"><a class="nav-link" href="get_involved.html">Get Involved</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</nav>
